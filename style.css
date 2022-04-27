@@ -16,19 +16,20 @@ body {
    transform: translate(-50%, -50%);
    width: 670px;
    height: 670px;
-   font-size: 1.5em;
+   font-size: 1.5rem;
 }
 
 .board{
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(8, 1fr);
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 5px solid purple;
+    border: 5px solid black;
     height: 610px;
     width: 610px;
+    cursor: grab;
 }
 
 .square {
@@ -37,11 +38,11 @@ body {
 }
 
 .black {
-    background: black;
+    background: purple;
 }
 
 .white {
-    background: white;
+    background: goldenrod;
 }
 
 .numbers{

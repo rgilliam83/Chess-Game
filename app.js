@@ -1,7 +1,7 @@
 const board = document.querySelector(".board");
 const boardletters = document.querySelector(".letters");
 const boardnumbers = document.querySelector(".numbers");
-let letters = ["a","b", "c", "d", "e", "f", "g", "h"];
+let letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
 let index = 0;
 let black = false;
 let num = 1;
@@ -16,16 +16,14 @@ for (let i = 0; i < 8; i++) {
     boardnumbers.appendChild(numbers);
 }
 
-for (let i = 0; i <= 64; i++) {
+for (let i = 1; i <= 64; i++) {
     const square = document.createElement("div");
-    if (black)
-    {
+    if (black) {
         square.classList.add("square");
         square.classList.add("black");
         index++;
         black = !black;
-    }
-    else{
+    } else {
         square.classList.add("square");
         square.classList.add("white");
         index++;
@@ -33,8 +31,7 @@ for (let i = 0; i <= 64; i++) {
     }
 
     board.appendChild(square);
-    if (index === 8) 
-    {
+    if (index === 8) {
         black = !black;
         index = 0;
     }
