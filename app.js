@@ -7,6 +7,7 @@ let black = false;
 let num = 1;
 
 
+
 for (let i = 0; i < 8; i++) {
     let letter = document.createElement("li");
     letter.textContent = letters[i];

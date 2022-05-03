@@ -1,3 +1,7 @@
+:root{
+    --shake-anim: none;
+  }
+
 *
 {
 margin: 0;
@@ -29,7 +33,15 @@ body {
     border: 5px solid black;
     height: 810px;
     width: 810px;
-    cursor: grab;
+    
+}
+
+.active{
+    box-shadow: 0px 0px 22px 5px rgba(0,0,0,0.75);
+  }
+
+div:hover{
+    cursor: pointer;    
 }
 
 .square {
@@ -77,3 +89,20 @@ li {
     border: 1px solid white;
     border-radius: 50px;  
 }
+
+.red{
+    visibility: visible;
+    background-color: rgb(179,0,0);	
+  }
+  
+  .black{
+    visibility: visible;
+  }
+  
+  .options{
+    opacity: 0.3;
+  }
+  
+  .disabled{
+    pointer-events: none;
+  }
