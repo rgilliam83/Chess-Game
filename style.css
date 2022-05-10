@@ -1,75 +1,59 @@
-*
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*{ 
+  box-sizing: border-box; 
+  padding:0; 
+  margin:0; 
+  font-size:0; 
+  border:0; 
+  outline:none; 
+  overflow:hidden; 
+  -webkit-tap-highlight-color:transparent;
+  -moz-user-select:none; 
+  -ms-user-select:none; 
+  -webkit-user-select:none; 
+  user-select:none;
 }
 
-body {
-    min-height: 100vh;
+html,body,.full,.gameboard>tbody{
+  width:100%; 
+  height:100%;
 }
 
-.upperdiv{
-   position: absolute;
-   top: 47%; 
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 870px;
-   height: 870px;
-   font-size: 1.5rem;
+#page{
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  background: #342d7d;
 }
 
-.board{
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 5px solid black;
-    height: 810px;
-    width: 810px;
-    
+
+.gameboard{
+  table-layout:fixed; 
+  height:100%; 
+  background:black; 
+  border-collapse:collapse; 
+}
+.gameboard tr,.gameboard td{
+  width:100%; 
+  height:calc(100% / 8);
 }
 
-div:hover{
-    cursor: pointer;    
+.gameboard tr:nth-child(odd)>td:nth-child(odd),.gameboard tr:nth-child(even)>td:nth-child(even){
+  background:#5f5f5f;
+}
+.gameboard td>div{
+  cursor:pointer; 
+  width:100%; 
+  height:100%; 
+  border:double rgb(10, 7, 37) 4px; 
+  border-radius:50%;
+}
+.red_disk{
+  background: #D4AF37; 
+}
+.black_disk{
+  background:#341d5c; 
 }
 
-.square {
-    height: 100px;
-    width: 100px;
+td>.using{
+  position:absolute;
 }
-
-.black {
-    background: purple;
-}
-
-.white {
-    background: goldenrod;
-}
-
-.numbers{
-    height: 100%;
-    width: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    left: 0;
-    top: 0;
-    text-align: center;
-}
-
-.letters{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-li {
-    list-style: none;
-}
-
