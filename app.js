@@ -113,7 +113,8 @@ GameBoard = function(wide = 8, high = 8){
 GamePiece = function(className){
   this.piece = M('div'); this.piece.className = className;
 }
-// tiny Library above - magic below can be put on a separate page using a load Event *(except // end load line)*
+
+
 const board = new GameBoard, player1 = new GamePlayer('player 1'), player2 = new GamePlayer('player 2');
 const page = I('page');
 function redDisk(){
@@ -131,6 +132,5 @@ for(let i=0,n=1,p,l=8; i<l; i+=2,n+=2){
   p = blackDisk(); board.addPiece(player2, n, 2, p);
 }
 board.appendTo(page);
-}); // end load
-//]]>
+});
  
