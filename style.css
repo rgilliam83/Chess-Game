@@ -40,6 +40,7 @@ html,body,.full,.gameboard>tbody{
 .gameboard tr:nth-child(odd)>td:nth-child(odd),.gameboard tr:nth-child(even)>td:nth-child(even){
   background:#5f5f5f;
 }
+
 .gameboard td>div{
   cursor:pointer; 
   width:100%; 
